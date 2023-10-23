@@ -1,4 +1,4 @@
-# Authentication API with JWT in Django REST Framework
+# JSON Web Token Authentication
 
 ## Project Description
 This project provides an Authentication API with JWT (JSON Web Tokens) in Django REST Framework. It includes the following functionalities:
