@@ -6,14 +6,20 @@ from django.contrib.auth import authenticate
 from account.renderers import UserRenderer
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
+from fastapi import FastAPI
+
+app=FastAPI()
+
 
 # Generate Token Manually
+
 def get_tokens_for_user(user):
   refresh = RefreshToken.for_user(user)
   return {
       'refresh': str(refresh),
       'access': str(refresh.access_token),
   }
+
 
 class UserRegistrationView(APIView):
   renderer_classes = [UserRenderer]
@@ -38,6 +44,8 @@ class UserLoginView(APIView):
     else:
       return Response({'errors':{'non_field_errors':['Email or Password is not Valid']}}, status=status.HTTP_404_NOT_FOUND)
 
+
+@app.get("/api/user/profile/")
 class UserProfileView(APIView):
   renderer_classes = [UserRenderer]
   permission_classes = [IsAuthenticated]
