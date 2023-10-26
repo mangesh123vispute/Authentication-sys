@@ -112,6 +112,14 @@
         "documentation": {}
     },
     {
+        "label": "permissions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -202,6 +210,14 @@
     },
     {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "re_path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -370,11 +386,11 @@
         "documentation": {}
     },
     {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
+        "label": "GenericAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
         "isExtraImport": true,
-        "detail": "fastapi",
+        "detail": "rest_framework.generics",
         "documentation": {}
     },
     {
@@ -399,6 +415,22 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "get_schema_view",
+        "importPath": "drf_yasg.views",
+        "description": "drf_yasg.views",
+        "isExtraImport": true,
+        "detail": "drf_yasg.views",
+        "documentation": {}
+    },
+    {
+        "label": "openapi",
+        "importPath": "drf_yasg",
+        "description": "drf_yasg",
+        "isExtraImport": true,
+        "detail": "drf_yasg",
         "documentation": {}
     },
     {
@@ -558,7 +590,7 @@
         "kind": 6,
         "importPath": "djangoauthapi1.account.views",
         "description": "djangoauthapi1.account.views",
-        "peekOfCode": "class UserRegistrationView(APIView):\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):\n    serializer = UserRegistrationSerializer(data=request.data)\n    serializer.is_valid(raise_exception=True)\n    user = serializer.save()\n    token = get_tokens_for_user(user)\n    return Response({'token':token, 'msg':'Registration Successful'}, status=status.HTTP_201_CREATED)\nclass UserLoginView(APIView):\n  renderer_classes = [UserRenderer]",
+        "peekOfCode": "class UserRegistrationView(GenericAPIView):\n  serializer_class = UserRegistrationSerializer\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):\n    serializer = UserRegistrationSerializer(data=request.data)\n    serializer.is_valid(raise_exception=True)\n    user = serializer.save()\n    token = get_tokens_for_user(user)\n    return Response({'token':token, 'msg':'Registration Successful'}, status=status.HTTP_201_CREATED)\nclass UserLoginView(GenericAPIView):",
         "detail": "djangoauthapi1.account.views",
         "documentation": {}
     },
@@ -567,7 +599,7 @@
         "kind": 6,
         "importPath": "djangoauthapi1.account.views",
         "description": "djangoauthapi1.account.views",
-        "peekOfCode": "class UserLoginView(APIView):\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):\n    serializer = UserLoginSerializer(data=request.data)\n    serializer.is_valid(raise_exception=True)\n    email = serializer.data.get('email')\n    password = serializer.data.get('password')\n    user = authenticate(email=email, password=password)\n    if user is not None:\n      token = get_tokens_for_user(user)",
+        "peekOfCode": "class UserLoginView(GenericAPIView):\n  serializer_class=UserLoginSerializer\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):\n    serializer = UserLoginSerializer(data=request.data)\n    serializer.is_valid(raise_exception=True)\n    email = serializer.data.get('email')\n    password = serializer.data.get('password')\n    user = authenticate(email=email, password=password)\n    if user is not None:",
         "detail": "djangoauthapi1.account.views",
         "documentation": {}
     },
@@ -576,7 +608,7 @@
         "kind": 6,
         "importPath": "djangoauthapi1.account.views",
         "description": "djangoauthapi1.account.views",
-        "peekOfCode": "class UserProfileView(APIView):\n  renderer_classes = [UserRenderer]\n  permission_classes = [IsAuthenticated]\n  def get(self, request, format=None):\n    serializer = UserProfileSerializer(request.user)\n    return Response(serializer.data, status=status.HTTP_200_OK)\nclass UserChangePasswordView(APIView):\n  renderer_classes = [UserRenderer]\n  permission_classes = [IsAuthenticated]\n  def post(self, request, format=None):",
+        "peekOfCode": "class UserProfileView(GenericAPIView):\n  serializer_class=UserProfileSerializer\n  renderer_classes = [UserRenderer]\n  permission_classes = [IsAuthenticated]\n  def get(self, request, format=None):\n    serializer = UserProfileSerializer(request.user)\n    return Response(serializer.data, status=status.HTTP_200_OK)\nclass UserChangePasswordView(GenericAPIView):\n  serializer_class=UserChangePasswordSerializer\n  renderer_classes = [UserRenderer]",
         "detail": "djangoauthapi1.account.views",
         "documentation": {}
     },
@@ -585,7 +617,7 @@
         "kind": 6,
         "importPath": "djangoauthapi1.account.views",
         "description": "djangoauthapi1.account.views",
-        "peekOfCode": "class UserChangePasswordView(APIView):\n  renderer_classes = [UserRenderer]\n  permission_classes = [IsAuthenticated]\n  def post(self, request, format=None):\n    serializer = UserChangePasswordSerializer(data=request.data, context={'user':request.user})\n    serializer.is_valid(raise_exception=True)\n    return Response({'msg':'Password Changed Successfully'}, status=status.HTTP_200_OK)\nclass SendPasswordResetEmailView(APIView):\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):",
+        "peekOfCode": "class UserChangePasswordView(GenericAPIView):\n  serializer_class=UserChangePasswordSerializer\n  renderer_classes = [UserRenderer]\n  permission_classes = [IsAuthenticated]\n  def post(self, request, format=None):\n    serializer = UserChangePasswordSerializer(data=request.data, context={'user':request.user})\n    serializer.is_valid(raise_exception=True)\n    return Response({'msg':'Password Changed Successfully'}, status=status.HTTP_200_OK)\nclass SendPasswordResetEmailView(GenericAPIView):\n  serializer_class=SendPasswordResetEmailSerializer",
         "detail": "djangoauthapi1.account.views",
         "documentation": {}
     },
@@ -594,7 +626,7 @@
         "kind": 6,
         "importPath": "djangoauthapi1.account.views",
         "description": "djangoauthapi1.account.views",
-        "peekOfCode": "class SendPasswordResetEmailView(APIView):\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):\n    serializer = SendPasswordResetEmailSerializer(data=request.data)\n    serializer.is_valid(raise_exception=True)\n    return Response({'msg':'Password Reset link send. Please check your Email'}, status=status.HTTP_200_OK)\nclass UserPasswordResetView(APIView):\n  renderer_classes = [UserRenderer]\n  def post(self, request, uid, token, format=None):\n    serializer = UserPasswordResetSerializer(data=request.data, context={'uid':uid, 'token':token})",
+        "peekOfCode": "class SendPasswordResetEmailView(GenericAPIView):\n  serializer_class=SendPasswordResetEmailSerializer\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):\n    serializer = SendPasswordResetEmailSerializer(data=request.data)\n    serializer.is_valid(raise_exception=True)\n    return Response({'msg':'Password Reset link send. Please check your Email'}, status=status.HTTP_200_OK)\nclass UserPasswordResetView(GenericAPIView):\n  serializer_class=SendPasswordResetEmailSerializer\n  renderer_classes = [UserRenderer]",
         "detail": "djangoauthapi1.account.views",
         "documentation": {}
     },
@@ -603,7 +635,7 @@
         "kind": 6,
         "importPath": "djangoauthapi1.account.views",
         "description": "djangoauthapi1.account.views",
-        "peekOfCode": "class UserPasswordResetView(APIView):\n  renderer_classes = [UserRenderer]\n  def post(self, request, uid, token, format=None):\n    serializer = UserPasswordResetSerializer(data=request.data, context={'uid':uid, 'token':token})\n    serializer.is_valid(raise_exception=True)\n    return Response({'msg':'Password Reset Successfully'}, status=status.HTTP_200_OK)",
+        "peekOfCode": "class UserPasswordResetView(GenericAPIView):\n  serializer_class=SendPasswordResetEmailSerializer\n  renderer_classes = [UserRenderer]\n  def post(self, request, uid, token, format=None):\n    serializer = SendPasswordResetEmailSerializer(data=request.data, context={'uid':uid, 'token':token})\n    serializer.is_valid(raise_exception=True)\n    return Response({'msg':'Password Reset Successfully'}, status=status.HTTP_200_OK)",
         "detail": "djangoauthapi1.account.views",
         "documentation": {}
     },
@@ -612,7 +644,7 @@
         "kind": 2,
         "importPath": "djangoauthapi1.account.views",
         "description": "djangoauthapi1.account.views",
-        "peekOfCode": "def get_tokens_for_user(user):\n  refresh = RefreshToken.for_user(user)\n  return {\n      'refresh': str(refresh),\n      'access': str(refresh.access_token),\n  }\nclass UserRegistrationView(APIView):\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):\n    serializer = UserRegistrationSerializer(data=request.data)",
+        "peekOfCode": "def get_tokens_for_user(user):\n  refresh = RefreshToken.for_user(user)\n  return {\n      'refresh': str(refresh),\n      'access': str(refresh.access_token),\n  }\nclass UserRegistrationView(GenericAPIView):\n  serializer_class = UserRegistrationSerializer\n  renderer_classes = [UserRenderer]\n  def post(self, request, format=None):",
         "detail": "djangoauthapi1.account.views",
         "documentation": {}
     },
@@ -860,11 +892,20 @@
         "documentation": {}
     },
     {
+        "label": "schema_view",
+        "kind": 5,
+        "importPath": "djangoauthapi1.djangoauthapi1.urls",
+        "description": "djangoauthapi1.djangoauthapi1.urls",
+        "peekOfCode": "schema_view = get_schema_view(\n   openapi.Info(\n      title=\"  Documentation for the authentication api\",\n      default_version='v1',\n      description=\"This the the Api documentation for the authentication api \",\n      terms_of_service=\"https://www.google.com/policies/terms/\",\n      contact=openapi.Contact(email=\"contact@snippets.local\"),\n      license=openapi.License(name=\"BSD License\"),\n   ),\n   public=True,",
+        "detail": "djangoauthapi1.djangoauthapi1.urls",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.urls",
         "description": "djangoauthapi1.djangoauthapi1.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/user/', include('account.urls'))\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/user/', include('account.urls'),),\n    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),\n]",
         "detail": "djangoauthapi1.djangoauthapi1.urls",
         "documentation": {}
     },

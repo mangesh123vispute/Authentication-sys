@@ -13,6 +13,9 @@ This project provides an Authentication API with JWT (JSON Web Tokens) in Django
 ## Postman Collection
 You can test the API using the provided Postman Collection. Import the "DjangoAuthAPI.postman_collection" file into Postman to start testing the API.
 
+
+
+
 ## Prerequisites
 To run this project, you need to follow these steps:
 
@@ -26,6 +29,9 @@ python manage.py migrate
 python manage.py runserver
 
 ```
+## To see the api documentation:
+http://localhost:8000/swagger/
+
 #Contact Information
 
 Name: Mangesh Vispute
