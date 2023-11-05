@@ -734,7 +734,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'djangoauthapi1.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# JWT Configuration",
+        "peekOfCode": "WSGI_APPLICATION = 'djangoauthapi1.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.0/ref/settings/#databases\nDATABASES = {\n      'default': {\n          'ENGINE': 'djongo',\n          'NAME': 'django',\n          \"CLIENT\":{\n            'host':'mongodb+srv://root2:1234@cluster0.l588ikv.mongodb.net/',\n            'username':'root2',",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -743,7 +743,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# JWT Configuration\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',",
+        "peekOfCode": "DATABASES = {\n      'default': {\n          'ENGINE': 'djongo',\n          'NAME': 'django',\n          \"CLIENT\":{\n            'host':'mongodb+srv://root2:1234@cluster0.l588ikv.mongodb.net/',\n            'username':'root2',\n            'password':'1234',\n          }\n      }",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },

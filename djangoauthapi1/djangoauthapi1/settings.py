@@ -82,11 +82,17 @@ WSGI_APPLICATION = 'djangoauthapi1.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+      'default': {
+          'ENGINE': 'djongo',
+          'NAME': 'django',
+          "CLIENT":{
+            'host':'mongodb+srv://root2:1234@cluster0.l588ikv.mongodb.net/',
+            'username':'root2',
+            'password':'1234',
+
+          }
+      }
+  }
 
 # JWT Configuration
 REST_FRAMEWORK = {
