@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+
+  <title>Authentication</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+  
+    <section class="slider_section ">
+      
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+       
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-5 offset-md-1">
+                  <div class="detail-box">
+                    <h1>
+                      To see Swagger doc <br>
+                      Hit on below button<br>
+                      
+                    </h1>
+                    <p>
+                      Use Documentation and explore the application..
+                    </p>
+                    <div class="btn-box">
+                      <a href="/swagger" class="btn-1">
+                        Documentation
+                      </a>
+                     
+                    </div>
+                  </div>
+                </div>
+                
+    </section>
+    
+  </div>
+
+
+</body>
+
+</html>
