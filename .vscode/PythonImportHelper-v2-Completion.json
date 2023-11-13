@@ -686,7 +686,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-_zk=9yl=ul!po@_z-)wq&x4=&!(ons2(pogyu52+f7f37v3j$y'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-_zk=9yl=ul!po@_z-)wq&x4=&!(ons2(pogyu52+f7f37v3j$y'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app', '.now.sh']\n# Application definition\nINSTALLED_APPS = [",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -695,7 +695,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-_zk=9yl=ul!po@_z-)wq&x4=&!(ons2(pogyu52+f7f37v3j$y'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-_zk=9yl=ul!po@_z-)wq&x4=&!(ons2(pogyu52+f7f37v3j$y'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app', '.now.sh']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -704,7 +704,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['.vercel.app', '.now.sh']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -713,7 +713,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'corsheaders',",
+        "peekOfCode": "ALLOWED_HOSTS = ['.vercel.app', '.now.sh']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'corsheaders',",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -794,7 +794,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.0/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.0/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [BASE_DIR/'static',]\nSTATIC_ROOT = BASE_DIR/'staticfiles'\n# Default primary key field type",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -803,7 +803,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.0/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.0/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [BASE_DIR/'static',]\nSTATIC_ROOT = BASE_DIR/'staticfiles'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -812,7 +812,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.0/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.0/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [BASE_DIR/'static',]\nSTATIC_ROOT = BASE_DIR/'staticfiles'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -821,7 +821,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.0/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'account.User'",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.0/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [BASE_DIR/'static',]\nSTATIC_ROOT = BASE_DIR/'staticfiles'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'account.User'",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -830,7 +830,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'account.User'\n# Email Configuration\nEMAIL_BACKEND=\"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = 'smtp.gmail.com'",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = [BASE_DIR/'static',]\nSTATIC_ROOT = BASE_DIR/'staticfiles'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'account.User'\n# Email Configuration\nEMAIL_BACKEND=\"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = 'smtp.gmail.com'",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -839,7 +839,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'account.User'\n# Email Configuration\nEMAIL_BACKEND=\"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587",
+        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR/'static',]\nSTATIC_ROOT = BASE_DIR/'staticfiles'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'account.User'\n# Email Configuration\nEMAIL_BACKEND=\"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -848,7 +848,7 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.settings",
         "description": "djangoauthapi1.djangoauthapi1.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'account.User'\n# Email Configuration\nEMAIL_BACKEND=\"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_HOST_USER = os.environ.get('EMAIL_USER')",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR/'staticfiles'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'account.User'\n# Email Configuration\nEMAIL_BACKEND=\"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_HOST_USER = os.environ.get('EMAIL_USER')",
         "detail": "djangoauthapi1.djangoauthapi1.settings",
         "documentation": {}
     },
@@ -965,7 +965,16 @@
         "kind": 5,
         "importPath": "djangoauthapi1.djangoauthapi1.wsgi",
         "description": "djangoauthapi1.djangoauthapi1.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
+        "peekOfCode": "application = get_wsgi_application()\napp = application",
+        "detail": "djangoauthapi1.djangoauthapi1.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "djangoauthapi1.djangoauthapi1.wsgi",
+        "description": "djangoauthapi1.djangoauthapi1.wsgi",
+        "peekOfCode": "app = application",
         "detail": "djangoauthapi1.djangoauthapi1.wsgi",
         "documentation": {}
     },
