@@ -30,7 +30,8 @@ python manage.py runserver
 
 ```
 ## To see the api documentation:
-http://localhost:8000/swagger/
+authentication-sys-eosin.vercel.app
+
 
 #Contact Information
 
