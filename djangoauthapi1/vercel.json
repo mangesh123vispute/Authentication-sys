@@ -10,7 +10,11 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
+<<<<<<< HEAD
         "distDir": "staticfiles_build"
+=======
+        "distDir": "staticfiles"
+>>>>>>> 28de849f368015131b36b0e3f12165bbc537f386
       }
     }
   ],
@@ -21,7 +25,11 @@
     },
     {
       "src": "/(.*)",
+<<<<<<< HEAD
       "dest": "djangoauthapi1/wsgi.py"
+=======
+      "dest": "<projectname>/wsgi.py"
+>>>>>>> 28de849f368015131b36b0e3f12165bbc537f386
     }
   ]
 }
