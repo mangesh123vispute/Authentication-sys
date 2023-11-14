@@ -9,6 +9,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+
 schema_view = get_schema_view(
    openapi.Info(
       title="  Documentation for the authentication api",
