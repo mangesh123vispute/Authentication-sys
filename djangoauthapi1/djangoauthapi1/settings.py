@@ -27,11 +27,8 @@ SECRET_KEY = 'django-insecure-_zk=9yl=ul!po@_z-)wq&x4=&!(ons2(pogyu52+f7f37v3j$y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
+
 ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
-=======
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
->>>>>>> 28de849f368015131b36b0e3f12165bbc537f386
 
 
 # Application definition
@@ -86,15 +83,11 @@ WSGI_APPLICATION = 'djangoauthapi1.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-      'default': {
-          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-          'NAME': 'railway',
-          'USER': 'postgres',
-          'PASSWORD': '6FbDb*C5cfAf34b324*23aFA*B1GF*GB',
-          'HOST':'monorail.proxy.rlwy.net',
-          'PORT':'43366',
-      }
-  }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # JWT Configuration
 REST_FRAMEWORK = {
@@ -142,10 +135,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR/'static',]
 STATIC_ROOT = BASE_DIR/'staticfiles'
 
-<<<<<<< HEAD
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
-=======
->>>>>>> 28de849f368015131b36b0e3f12165bbc537f386
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
